@@ -221,10 +221,10 @@ h2{
     <h2><a href="index.html" style="color: white; text-decoration: none;">Pati's Chemistry</a></h2>
     </div>
           <nav style="background-color: #003366;" >
-            <a href="admin-login.html" title="Admin Login" style="color: white; margin-right: 15px;">
+            <a href="admin-login.php" title="Admin Login" style="color: white; margin-right: 15px;">
                 <i class="fas fa-user-shield fa-lg"></i>
             </a>
-            <a href="user-auth.html" title="User Login" style="color: white; margin-right: 15px; ">
+            <a href="user-auth.php" title="User Login" style="color: white; margin-right: 15px; ">
                 <i class="fas fa-user fa-lg"></i>
             </a>
           </nav>
