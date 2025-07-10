@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 } else {
    $status= "Connected successfully";
 }
-$sql = "SELECT id, username, contactno, address FROM users";
+$sql = "SELECT id, username, contactno, address FROM users where id =".$_GET['userid'];
 $result = $conn->query($sql);
 //print_r($result);
 
@@ -57,44 +57,32 @@ echo  $status;
       <div class="card">
           <h3>Users</h3>
           <table id="usertbl">
-              <tr class="header">
-                  <th>User Id</th>
-                  <th>User Name</th>
-                  <th> Contact No.</th>
-                  <th>Address</th>
-                  <th></th>
-              </tr>
-
               <?php
-if($result->num_rows) {
-while($row=$result->fetch_assoc()) {
-//print_r($row);
-//exit;
- ?>
-              <tr class="info">
-                  <td><a href="view-users.php?userid=<?php echo $row['id'];?>"><?php echo $row['id'];?></a></td>
-                  <td><?php echo $row['username'];?></td>
-                  <td><?php echo $row['contactno'];?></td>
-                  <td><?php echo $row['address'];?></td>
-                  <td>
-                      <!--<button onClick="">Edit</button>-->
-                      <i class="fa fa-edit" style="font-size: 20px;"></i>
-<a href="view-users.php?userid=<?php echo $row['id'];?>">
-                      <!--<button onClick="">Delete</button>-->
-                      <i class="fa fa-trash" style="font-size: 20px; color:red;"></i></a>
-                  </td>
+                if($result->num_rows) {
+                while($row=$result->fetch_assoc()) { ?>
 
+              <tr>
+                  <td>User Id:<input type="text" value="<?php echo $row['id'];?>"></td>
+              </tr>
+              <tr>
+                  <td>User Name:<?php echo $row['username'];?></td>
+              </tr>
+              <tr>
+                  <td>Contact No.:<?php echo $row['contactno'];?></td>
+              </tr>
+              <tr>
+                  <td>Address:<?php echo $row['address'];?></td>
               </tr>
               <?php
-             }
-        }
+}
+}
              ?>
           </table>
       </div>
-
-
+      <button>
+          Update
+      </button>
   </div>
-
   <!-- Footer -->
   <?php
   include("./footer.php");

@@ -30,8 +30,8 @@
   <!-- Navigation Bar -->
   <nav>
     <ul>
-      <li><a href="index.php">Home</a></li>
-      <li><a href="./about.php">About</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="/About">About</a></li>
       <div class="dropdown">      
       <li><a href="/Courses">Courses</a></li>
       <div class="dropdown-content">
@@ -47,22 +47,7 @@
   </nav>
     <section class="main-content">
         
-        <div class="hero">
-            <h2>Welcome to Pati's Chemistry!</h2>
-            <p>Learning Chemistry with Fun.</p>
-            <a href="Courses" class="cta-button">Explore Courses</a>
-        </div>
-      
-    </section>
-    <section class="highlight">
-        <h2>Courses</h2>
-        <div class="course-list">
-
-            <div><a href="Class IX" class="cta-button">Class IX</a></div>
-            <div ><a href="Class X" class="cta-button">Class X</a></div>
-            <div ><a href="Class XI" class="cta-button">Class XI</a></div>
-            <div ><a href="Class XII" class="cta-button">Class XII</a></div>
-    </section>
+        
     <section class="about-preview">
         <h2>About Pati's Chemistry</h2>
         <p>Located in Sailashree Vihar, Bhubaneswar. Pati's Chemistry offers class IXth,Xth,XIth and XIIth chemistry with detail explained key notes based on CBSE syllabus.</p>
